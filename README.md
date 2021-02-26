@@ -12,6 +12,17 @@ git clone https://github.com/strapi/foodadvisor.git
 
 Navigate to your `./my-projects/foodadvisor` folder by running `cd foodadvisor` from your command line.
 
+## 1. Configure the Datadog APM
+
+The Datadog APM client is included through the `/api/config/functions/bootstrap.js` file.
+
+Set the Datadog APM environment variables in the `.env` file:
+```shell
+DD_SERVICE=foodadvisor
+DD_ENV=localhost
+DD_AGENT_HOST=127.0.0.1
+```
+
 ## 2. Start Strapi
 
 Naviagte to your `./my-projects/foodadvisor/api` folder by running `cd api` from your command line.
