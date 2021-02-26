@@ -8,4 +8,9 @@
  * run jobs, or perform some special logic.
  */
 
-module.exports = async () => {};
+module.exports = async () => {
+    const tracer = require('dd-trace').init({
+        hostname: process.env.DD_AGENT_HOST,
+        port: 8126
+    });
+};
